@@ -203,5 +203,11 @@ namespace Swashbuckle.AspNetCore.SwaggerUI
         /// (Authorization header with Basic base64encode(client_id + client_secret))
         /// </summary>
         public bool UseBasicAuthenticationWithAccessCodeGrant { get; set; } = false;
+
+        /// <summary>
+        /// Only activated for the authorizaton_code flow. PKCE stands for Proof Key for Code Exchange
+        /// and it brings enhanced security for OAuth public clients.
+        /// </summary>
+        public bool UsePkce { get; set; } = false;
     }
 }

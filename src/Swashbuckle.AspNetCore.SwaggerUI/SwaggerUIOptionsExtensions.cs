@@ -258,5 +258,14 @@ namespace Microsoft.AspNetCore.Builder
         {
             options.OAuthConfigObject.UseBasicAuthenticationWithAccessCodeGrant = true;
         }
+
+        /// <summary>
+        /// Only activated for the authorizaton_code flow. PKCE stands for Proof Key for Code Exchange
+        /// and it brings enhanced security for OAuth public clients.
+        /// </summary>
+        public static void OAuthUsePkce(this SwaggerUIOptions options)
+        {
+            options.OAuthConfigObject.UsePkce = true;
+        }
     }
 }
